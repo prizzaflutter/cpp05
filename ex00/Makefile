@@ -1,5 +1,5 @@
 # Change CXX back to c++ before your evaluation!
-CXX = g++
+CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME = program
