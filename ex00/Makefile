@@ -1,6 +1,6 @@
-# Change CXX back to c++ before your evaluation!
-CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+# Change CC back to c++ before your evaluation!
+CC = c++
+FLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME = program
 
@@ -11,16 +11,16 @@ OBJ = $(SRC:.cpp=.o)
 all: $(NAME)
 
 %.o: %.cpp Bureaucrat.hpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 clean: 
-	del /Q /F *.o
+	rm -rf $(OBJ)
 
 fclean: clean
-	del /Q /F $(NAME).exe
+	rm -rf $(NAME)
 
 re: fclean all
 

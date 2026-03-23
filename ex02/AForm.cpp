@@ -75,10 +75,6 @@ const char* AForm::GradeTooLowException::what() const throw(){
     return "AForm grade requirement is too low";
 }
 
-class FormNotSignedException : public std::exception { 
-        public: virtual const char* what() const throw();
-    };
-
 std::ostream& operator<<(std::ostream& os, const AForm& Aform) {
     os << "AForm: " << Aform.getName() 
        << ", Status: " << (Aform.getIsSigned() ? "Signed" : "Not Signed")

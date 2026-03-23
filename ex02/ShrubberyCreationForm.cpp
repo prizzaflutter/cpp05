@@ -19,13 +19,11 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 ShrubberyCreationForm::~ShrubberyCreationForm(){}
 
 void ShrubberyCreationForm::executeAction() const {
-    std::ofstream file((this->target + "shrubbery").c_str());
+    std::ofstream file((this->target + "_shrubbery").c_str());
     if (!file.is_open()){
         std::cerr << "Error: Could not open file shrubbery." << std::endl;
         return ; 
     }
-
-    // Draw some 1337 ASCII trees
     file << "       _-_" << std::endl;
     file << "    /~~   ~~\\" << std::endl;
     file << " /~~         ~~\\" << std::endl;

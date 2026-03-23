@@ -4,9 +4,9 @@
 
 
 int main (){
-    std::cout << " Test 1: Bureaucrat is high enough level to sign" << std::endl;
+    std::cout << " Bureaucrat is high enough level to sign" << std::endl;
     try {
-        Bureaucrat boss("The Boss", 1);
+        Bureaucrat boss("The Boss", 60);
         Form taxDoc("Tax Document", 50, 50);
 
         std::cout << taxDoc << std::endl;

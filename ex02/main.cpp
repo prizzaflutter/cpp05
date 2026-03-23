@@ -3,8 +3,8 @@
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include <iostream>
-#include <ctime>   // For time()
-#include <cstdlib> // For srand()
+#include <ctime>
+#include <cstdlib>
 
 int main() {
     // Seed the random number generator for the Robotomy form
