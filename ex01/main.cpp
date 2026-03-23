@@ -6,11 +6,11 @@
 int main (){
     std::cout << " Bureaucrat is high enough level to sign" << std::endl;
     try {
-        Bureaucrat boss("The Boss", 60);
+        Bureaucrat idriss("The idriss", 60);
         Form taxDoc("Tax Document", 50, 50);
 
         std::cout << taxDoc << std::endl;
-        boss.signForm(taxDoc);
+        idriss.signForm(taxDoc);
         std::cout << taxDoc << std::endl;
     }catch(std::exception& ex){
         std::cerr << "Error: " << ex.what() << std::endl;

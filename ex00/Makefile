@@ -1,4 +1,3 @@
-# Change CC back to c++ before your evaluation!
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
@@ -23,5 +22,3 @@ fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all
-
-.PHONY: all clean fclean re

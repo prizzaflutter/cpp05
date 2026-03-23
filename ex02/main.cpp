@@ -7,7 +7,6 @@
 #include <cstdlib>
 
 int main() {
-    // Seed the random number generator for the Robotomy form
     srand(time(NULL));
 
     std::cout << "\n--- Creating Bureaucrats ---" << std::endl;
@@ -19,22 +18,22 @@ int main() {
 
     std::cout << "\n--- Testing Shrubbery Creation Form ---" << std::endl;
     ShrubberyCreationForm treeForm("Home");
-    intern.signForm(treeForm);     // Intern can sign (140 <= 145)
-    intern.executeForm(treeForm);  // Intern CANNOT execute (140 > 137)
-    boss.executeForm(treeForm);    // Boss executes it
+    intern.signForm(treeForm);  
+    intern.executeForm(treeForm); 
+    boss.executeForm(treeForm);  
 
     std::cout << "\n--- Testing Robotomy Request Form ---" << std::endl;
     RobotomyRequestForm roboForm("Bender");
     boss.signForm(roboForm);
     boss.executeForm(roboForm);
-    boss.executeForm(roboForm); // Execute a few times to test the 50% chance
+    boss.executeForm(roboForm);
     boss.executeForm(roboForm);
 
     std::cout << "\n--- Testing Presidential Pardon Form ---" << std::endl;
     PresidentialPardonForm pardonForm("Ford Prefect");
-    intern.signForm(pardonForm);  // Intern tries to sign (Fails, 140 > 25)
-    boss.signForm(pardonForm);    // Boss signs it
-    boss.executeForm(pardonForm); // Boss executes it
+    intern.signForm(pardonForm);
+    boss.signForm(pardonForm);
+    boss.executeForm(pardonForm); 
 
     std::cout << "\n--- Done! ---" << std::endl;
     return 0;
