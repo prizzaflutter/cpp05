@@ -1,16 +1,16 @@
-# Change CC back to c++ before your evaluation!
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME = program
 
-SRC = main.cpp Bureaucrat.cpp
+SRC = main.cpp Serializer.cpp
+
 OBJ = $(SRC:.cpp=.o)
 
 
 all: $(NAME)
 
-%.o: %.cpp Bureaucrat.hpp
+%.o: %.cpp Serializer.hpp Data.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)

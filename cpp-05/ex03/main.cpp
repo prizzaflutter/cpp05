@@ -21,18 +21,15 @@ int main() {
     std::cout << "\n--- Bureaucrat interacting with Intern's forms ---" << std::endl;
     Bureaucrat boss("The Boss", 1);
     
-    // Test if the form was actually created before trying to sign/execute it
     if (rrf) {
         boss.signForm(*rrf);
         boss.executeForm(*rrf);
     }
 
     std::cout << "\n--- Cleaning up memory (PREVENTING LEAKS) ---" << std::endl;
-    // We MUST delete the forms the intern created!
     delete rrf;
     delete scf;
     delete ppf;
-    // No need to delete 'unknown' because it returned NULL
 
     std::cout << "Done!" << std::endl;
     return 0;
