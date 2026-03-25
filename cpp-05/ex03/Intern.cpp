@@ -51,6 +51,6 @@ AForm* Intern::makeForm(const std::string& formName, const std::string& target) 
         }
     }
 
-    std::cout << "Error: Intern cannot create form '" << formName << "'because it deasn't exist." << std::endl;
+    std::cout << "Error: Intern cannot create form " << formName << "because it deasn't exist." << std::endl;
     return NULL;
 }
