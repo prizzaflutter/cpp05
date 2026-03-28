@@ -1,16 +1,16 @@
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME = convert
+NAME = program
 
-SRC = main.cpp ScalarConverter.cpp
+SRC = main.cpp 
 
 OBJ = $(SRC:.cpp=.o)
 
 
 all: $(NAME)
 
-%.o: %.cpp ScalarConverter.hpp
+%.o: %.cpp whatever.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)

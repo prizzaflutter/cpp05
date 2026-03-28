@@ -182,8 +182,7 @@ void ScalarConverter::convert(const std::string &literal)
             std::cout << static_cast<int>(d) << "\n";
         }
         std::cout << "float: ";
-        float f
-         = static_cast<float>(d);
+        float f = static_cast<float>(d);
         if (f - static_cast<int>(f) == 0)
             std::cout << f << ".0f\n";
         else
@@ -196,6 +195,6 @@ void ScalarConverter::convert(const std::string &literal)
     }
     else
     {
-        std::cout << "Error: Unknown literal type." << std::endl;
+        std::cout << "Error: Unknown literal type" << std::endl;
     }
 }
