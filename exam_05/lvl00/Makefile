@@ -3,14 +3,14 @@ FLAGS = -Wall -Werror -Wextra -std=c++98
 
 NAME = program
 
-SRC = main.cpp 
+SRC = main.cpp  bigint.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 
 all: $(NAME)
 
-%.o: %.cpp whatever.hpp
+%.o: %.cpp bigint.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)

@@ -1,7 +1,7 @@
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME = program
+NAME = easyfind
 
 SRC = main.cpp 
 
@@ -10,7 +10,7 @@ OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o: %.cpp whatever.hpp
+%.o: %.cpp easyfind.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)

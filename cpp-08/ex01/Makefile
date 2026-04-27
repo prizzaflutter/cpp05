@@ -1,16 +1,16 @@
 CC = c++
 FLAGS = -Wall -Werror -Wextra -std=c++98
 
-NAME = program
+NAME = span
 
-SRC = main.cpp 
+SRC = main.cpp Span.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 
 all: $(NAME)
 
-%.o: %.cpp whatever.hpp
+%.o: %.cpp Span.hpp
 	$(CC) $(FLAGS) -c $< -o $@
 
 $(NAME): $(OBJ)
